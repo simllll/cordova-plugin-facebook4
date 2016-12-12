@@ -83,7 +83,7 @@ exports.logEvent = function logEvent (eventName, params, valueToSum, s, f) {
 
   FB.AppEvents.logEvent(eventName, valueToSum, params);
 
-  if(s) s();
+  if(typeof s == 'function')) s()
 }
 
 exports.logPurchase = function logPurchase (value, currency, s, f) {
@@ -95,12 +95,12 @@ exports.logPurchase = function logPurchase (value, currency, s, f) {
   
   FB.AppEvents.logPurchase(value, currency);
 
-  if(s) s();
+  if(typeof s == 'function')) s()
 }
 
 exports.appInvite = function appInvite (options, s, f) {
   // App Invites are not avaliable in JS.
-  if(s) s()
+  if(typeof s == 'function')) s()
 }
 
 exports.logout = function logout (s, f) {
